@@ -1,0 +1,12 @@
+{
+  "name": "renovate-x",
+  "version": "1.0.0",
+  "description": "A bulk renamer app built using nodeJs",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "author": "sakshi",
+  "license": "ISC"
+}
