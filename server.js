@@ -1,1 +1,8 @@
-//main logic behind the bulk rename goes here in the server.js file
+const fs = require("node:fs");
+try {
+  const data = fs.readdir("data", (err, data) => {
+    console.log(data);
+  });
+} catch (err) {
+  console.error(err);
+}
