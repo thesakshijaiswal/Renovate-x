@@ -6,7 +6,7 @@ try {
   const data = fs.readdir("data", (err, data) => {
     for (let index = 0; index < data.length; index++) {
       const item = data[index];
-      const newFile = item.replaceAll(oldVal, newVal);
+      const newFile = "data/" + item.replaceAll(oldVal, newVal);
       if (!preview) {
         fs.rename("data/" + item, newFile, () => {
           console.log("Renamed successfully!");
