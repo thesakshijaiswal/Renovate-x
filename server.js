@@ -1,14 +1,17 @@
 const fs = require("node:fs");
+const path = require("path");
 const oldVal = "seminar";
 const newVal = "Project";
+const filePath = __dirname;
 const preview = true;
 try {
-  const data = fs.readdir("data", (err, data) => {
+  const data = fs.readdir(filePath, (err, data) => {
     for (let index = 0; index < data.length; index++) {
       const item = data[index];
-      const newFile = "data/" + item.replaceAll(oldVal, newVal);
+      const newFile = path.join(filePath, item.replaceAll(oldVal, newVal));
+      const oldFile = path.join(filePath, item);
       if (!preview) {
-        fs.rename("data/" + item, newFile, () => {
+        fs.rename(oldFile, newFile, () => {
           console.log("Renamed successfully!");
         });
       } else {
