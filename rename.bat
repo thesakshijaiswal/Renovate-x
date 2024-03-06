@@ -1,2 +1,4 @@
 //.bat for windows and .sh for mac users
-node server.js
+//node server.js
+readlink -f server 
+.js
